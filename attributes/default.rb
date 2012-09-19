@@ -11,7 +11,8 @@ default['rabbitmq']['mnesiadir'] = nil
 default['rabbitmq']['version'] = '2.6.1'
 default['rabbitmq']['arch'] = 'noarch'
 default['rabbitmq']['release'] = '1'
-# Override this if you have a yum repo with rabbitmq available.
+
+# Override this if you have a yum repo with rabbitmq available
 default['rabbitmq']['use_yum'] = false
 
 # config file location
