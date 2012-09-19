@@ -53,17 +53,17 @@ when "redhat", "centos", "scientific", "amazon", "fedora"
 
   if node['rabbitmq']['use_yum'] then
     yum_package "rabbitmq-server" do
-      version "#{node['rabbitmq']['version']}-#{node['rabbitmq']['release']}"
+      version node['rabbitmq']['version']
       arch node['rabbitmq']['arch']
       action :install
     end
   else
-    remote_file "#{Chef::Config[:file_cache_path]}/rabbitmq-server-#{node['rabbitmq']['version']}-#{node['rabbitmq']['release']}.#{node['rabbitmq']['arch']}.rpm" do
-      source "https://www.rabbitmq.com/releases/rabbitmq-server/v#{node['rabbitmq']['version']}/rabbitmq-server-#{node['rabbitmq']['version']}-#{node['rabbitmq']['release']}.#{node['rabbitmq']['arch']}.rpm"
+    remote_file "#{Chef::Config[:file_cache_path]}/rabbitmq-server-#{node['rabbitmq']['version']}.noarch.rpm" do
+      source "https://www.rabbitmq.com/releases/rabbitmq-server/v#{node['rabbitmq']['version']}/rabbitmq-server-#{node['rabbitmq']['version']}.noarch.rpm"
       action :create_if_missing
     end
 
-    rpm_package "#{Chef::Config[:file_cache_path]}/rabbitmq-server-#{node['rabbitmq']['version']}-#{node['rabbitmq']['release']}.#{node['rabbitmq']['arch']}.rpm" do
+    rpm_package "#{Chef::Config[:file_cache_path]}/rabbitmq-server-#{node['rabbitmq']['version']}.noarch.rpm" do
       action :install
     end
   end
