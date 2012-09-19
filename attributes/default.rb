@@ -9,8 +9,9 @@ default['rabbitmq']['mnesiadir'] = nil
 # RabbitMQ version to install for "redhat", "centos", "scientific", and "amazon".
 default['rabbitmq']['version'] = '2.6.1'
 default['rabbitmq']['arch'] = 'noarch'
+default['rabbitmq']['release'] = '1'
 # Override this if you have a yum repo with rabbitmq available. 
-default['rabbitmq']['use_yum'] = true
+default['rabbitmq']['use_yum'] = false
 
 # config file location
 # http://www.rabbitmq.com/configure.html#define-environment-variables
