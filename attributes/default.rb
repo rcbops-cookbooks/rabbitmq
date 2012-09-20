@@ -6,7 +6,6 @@ default['rabbitmq']['config'] = nil
 default['rabbitmq']['logdir'] = nil
 default['rabbitmq']['mnesiadir'] = nil
 
-
 # RabbitMQ version to install for redhat, centos, scientific, amazon, fedora
 default['rabbitmq']['version'] = '2.6.1'
 default['rabbitmq']['arch'] = 'noarch'
