@@ -1,3 +1,10 @@
+WARNING
+=======
+**** __THIS COOKBOOK SHOULD NO LONGER BE USED__ ****
+
+It is only left here for reference purposes.  The rcbops chef-cookbooks now use the opscode [rabbitmq](https://github.com/opscode-cookbooks/rabbitmq) cookbook indirectly, from within a wrapper cookbook, [rabbitmq-openstack](https://github.com/rcbops-cookbooks/rabbitmq-openstack)
+
+
 Description
 ===========
 This is a cookbook for managing RabbitMQ with Chef.  It uses the default settings, but can also be configured via attributes.
