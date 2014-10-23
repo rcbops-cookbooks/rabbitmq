@@ -54,7 +54,7 @@ action :set do
     cmd << "}'"
 
     if new_resource.priority
-      cmd << " #{new_resource.priority}"
+      cmd << " --priority #{new_resource.priority}"
     end
 
     execute "set_policy #{new_resource.policy}" do
